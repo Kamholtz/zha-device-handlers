@@ -44,6 +44,13 @@ from zhaquirks.const import (
     RIGHT,
     SHORT_PRESS,
     TURN_ON,
+    BUTTON,
+    BUTTON_1,
+    BUTTON_2,
+    BUTTON_3,
+    BUTTON_4,
+    BUTTON_5,
+    BUTTON_6,
 )
 # from zhaquirks.ikea import (
 #     IKEA,
@@ -161,77 +168,14 @@ class CKButton(CustomDevice):
     }
 
     device_automation_triggers = { # TODO: Replace these
-        (SHORT_PRESS, TURN_ON): {
+        (SHORT_PRESS, BUTTON): {
             COMMAND: COMMAND_TOGGLE,
             CLUSTER_ID: 6,
-            ENDPOINT_ID: 1,
+            ENDPOINT_ID: 12,
         },
-        (LONG_PRESS, TURN_ON): {
-            COMMAND: COMMAND_RELEASE,
-            CLUSTER_ID: 5,
-            ENDPOINT_ID: 1,
-            PARAMS: {"param1": 537},
-        },
-        (SHORT_PRESS, DIM_UP): {
-            COMMAND: COMMAND_STEP_ON_OFF,
-            CLUSTER_ID: 8,
-            ENDPOINT_ID: 1,
-            PARAMS: {"step_mode": 0},
-        },
-        (LONG_PRESS, DIM_UP): {
-            COMMAND: COMMAND_MOVE_ON_OFF,
-            CLUSTER_ID: 8,
-            ENDPOINT_ID: 1,
-            PARAMS: {"move_mode": 0},
-        },
-        (SHORT_PRESS, DIM_DOWN): {
-            COMMAND: COMMAND_STEP,
-            CLUSTER_ID: 8,
-            ENDPOINT_ID: 1,
-            PARAMS: {"step_mode": 1},
-        },
-        (LONG_PRESS, DIM_DOWN): {
-            COMMAND: COMMAND_MOVE,
-            CLUSTER_ID: 8,
-            ENDPOINT_ID: 1,
-            PARAMS: {"move_mode": 1},
-        },
-        (SHORT_PRESS, LEFT): {
-            COMMAND: COMMAND_PRESS,
-            CLUSTER_ID: 5,
-            ENDPOINT_ID: 1,
-            PARAMS: {
-                "param1": 257,
-                "param2": 13,
-                "param3": 0,
-            },
-        },
-        (LONG_PRESS, LEFT): {
-            COMMAND: COMMAND_HOLD,
-            CLUSTER_ID: 5,
-            ENDPOINT_ID: 1,
-            PARAMS: {
-                "param1": 3329,
-                "param2": 0,
-            },
-        },
-        (SHORT_PRESS, RIGHT): {
-            COMMAND: COMMAND_PRESS,
-            CLUSTER_ID: 5,
-            ENDPOINT_ID: 1,
-            PARAMS: {
-                "param1": 256,
-                "param2": 13,
-                "param3": 0,
-            },
-        },
-        (LONG_PRESS, RIGHT): {
-            COMMAND: COMMAND_HOLD,
-            CLUSTER_ID: 5,
-            ENDPOINT_ID: 1,
-            PARAMS: {
-                "param1": 3328,
-                "param2": 0,
-            },
+        (SHORT_PRESS, BUTTON_1): {
+            COMMAND: COMMAND_TOGGLE,
+            CLUSTER_ID: 6,
+            ENDPOINT_ID: 13,
         },
     }
