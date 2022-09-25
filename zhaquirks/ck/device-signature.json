@@ -58,6 +58,21 @@
         "0x0005", // scenes
         "0x0006"  // on/off
       ]
+    },
+    "15": {
+      "profile_id": 260,
+      "device_type": "0x0000",
+      "in_clusters": [
+        "0x0000", // basic
+        "0x0003", // identify
+        "0x0007"  // on/off switch configuration
+      ],
+      "out_clusters": [
+        "0x0003", // identify
+        "0x0004", // groups
+        "0x0005", // scenes
+        "0x0006"  // on/off
+      ]
     }
   },
   "manufacturer": "Nordic",
