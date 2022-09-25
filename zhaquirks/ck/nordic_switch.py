@@ -103,7 +103,22 @@ class CKButton(CustomDevice):
             },
             13: {
                  PROFILE_ID: zha.PROFILE_ID,
-                 DEVICE_TYPE: zha.DeviceType.ON_OFF_SWITCH, # TODO: wrong name, guessed
+                 DEVICE_TYPE: zha.DeviceType.ON_OFF_SWITCH, 
+                 INPUT_CLUSTERS: [
+                    Basic.cluster_id,
+                    Identify.cluster_id,
+                    OnOffConfiguration.cluster_id,
+                 ],
+                 OUTPUT_CLUSTERS: [
+                    Identify.cluster_id,
+                    Groups.cluster_id,
+                    Scenes.cluster_id,
+                    OnOff.cluster_id,
+                 ]
+            },
+            14: {
+                 PROFILE_ID: zha.PROFILE_ID,
+                 DEVICE_TYPE: zha.DeviceType.ON_OFF_SWITCH, 
                  INPUT_CLUSTERS: [
                     Basic.cluster_id,
                     Identify.cluster_id,
@@ -163,6 +178,21 @@ class CKButton(CustomDevice):
                     Scenes.cluster_id,
                     OnOff.cluster_id,
                  ]
+            },
+            14: {
+                 PROFILE_ID: zha.PROFILE_ID,
+                 DEVICE_TYPE: zha.DeviceType.ON_OFF_SWITCH, 
+                 INPUT_CLUSTERS: [
+                    Basic.cluster_id,
+                    Identify.cluster_id,
+                    OnOffConfiguration.cluster_id,
+                 ],
+                 OUTPUT_CLUSTERS: [
+                    Identify.cluster_id,
+                    Groups.cluster_id,
+                    Scenes.cluster_id,
+                    OnOff.cluster_id,
+                 ]
             }
         }
     }
@@ -177,5 +207,10 @@ class CKButton(CustomDevice):
             COMMAND: COMMAND_TOGGLE,
             CLUSTER_ID: 6,
             ENDPOINT_ID: 13,
+        },
+        (SHORT_PRESS, BUTTON_1): {
+            COMMAND: COMMAND_TOGGLE,
+            CLUSTER_ID: 6,
+            ENDPOINT_ID: 14,
         },
     }

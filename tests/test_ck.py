@@ -76,6 +76,21 @@ def test_ck_signature(assert_signature_matches_quirk):
             "0x0005",
             "0x0006"
           ]
+        },
+        "14": {
+          "profile_id": 260,
+          "device_type": "0x0000",
+          "in_clusters": [
+            "0x0000",
+            "0x0003",
+            "0x0007"
+          ],
+          "out_clusters": [
+            "0x0003",
+            "0x0004",
+            "0x0005",
+            "0x0006"
+          ]
         }
       },
       "manufacturer": "Nordic",
